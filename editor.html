@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>DodoMod Editor</title>
+  <style>
+    #editorCanvas {
+      border: 1px solid #333;
+      background: #202020;
+    }
+    #blockLoader {
+      width: 100%;
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+  <h1>DodoMod Block Editor</h1>
+
+  <textarea id="blockLoader" placeholder='Paste block JSON here'></textarea>
+  <button id="loadBlocksBtn">Load Blocks</button>
+
+  <br><br>
+  <canvas id="editorCanvas" width="800" height="450"></canvas>
+
+  <script src="dodomod-editor.js"></script>
+</body>
+  </html>
