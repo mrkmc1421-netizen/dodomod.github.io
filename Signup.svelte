@@ -1,0 +1,64 @@
+<script lang="ts">
+  let username = "";
+  let email = "";
+  let password = "";
+
+  function signup() {
+    if (!username || !email || !password) return;
+
+    alert(`Account created for ${username}!`);
+    // Replace with your real signup logic
+  }
+</script>
+
+<style>
+  .auth {
+    width: 360px;
+    margin: auto;
+    margin-top: 80px;
+    padding: 30px;
+    background: #222;
+    border-radius: 12px;
+    color: white;
+    font-family: Inter, sans-serif;
+    box-shadow: 0 0 20px rgba(255, 217, 61, 0.3);
+  }
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    background: #333;
+    color: white;
+  }
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #FFD93D;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #111;
+  }
+  button:hover {
+    background: #FF6F61;
+  }
+  a {
+    color: #FFD93D;
+  }
+</style>
+
+<div class="auth">
+  <h2>Create Account</h2>
+  <p>Join DodoMod</p>
+
+  <input bind:value={username} placeholder="Username" />
+  <input bind:value={email} type="email" placeholder="Email" />
+  <input bind:value={password} type="password" placeholder="Password" />
+
+  <button on:click={signup}>Sign Up</button>
+
+  <p>Already have an account? <a href="/login">Login</a></p>
+</div>
